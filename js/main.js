@@ -92,10 +92,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Анимация блока "Резюме после курса"
     const profiles = [
-        { avatar: '/Design/image/avatars/avatar1.jpg', title: 'Бренд-дизайнер', salary: '90 000 ₽' },
-        { avatar: '/Design/image/avatars/avatar2.jpg', title: 'SMM-дизайнер', salary: '110 000 ₽' },
-        { avatar: '/Design/image/avatars/avatar3.jpg', title: 'Веб-дизайнер', salary: '95 000 ₽' },
-        { avatar: '/Design/image/avatars/avatar4.jpg', title: 'Digital-дизайнер', salary: '120 000 ₽' },
+        { avatar: 'image/avatars/avatar1.jpg', title: 'Бренд-дизайнер', salary: '90 000 ₽' },
+        { avatar: 'image/avatars/avatar2.jpg', title: 'SMM-дизайнер', salary: '110 000 ₽' },
+        { avatar: 'image/avatars/avatar3.jpg', title: 'Веб-дизайнер', salary: '95 000 ₽' },
+        { avatar: 'image/avatars/avatar4.jpg', title: 'Digital-дизайнер', salary: '120 000 ₽' },
     ];
     let currentProfileIndex = 0;
     const profileSliderContent = document.getElementById('profile-slider-content');
