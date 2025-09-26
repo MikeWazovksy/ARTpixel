@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Курс по графическому дизайну | Стань дизайнером с нуля</title>
+    <link rel="icon" href="image/favicon.png" type="image/png" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body class="antialiased">
+    <!-- Хедер -->
+    <header id="header" class="absolute top-0 left-0 right-0 z-20">
+      <div
+        class="container mx-auto px-6 py-2 sm:py-4 lg:py-6 flex justify-between items-center relative z-50"
+      >
+        <!-- Логотип -->
+        <a href="index.html" class="flex-shrink-0 relative">
+          <img
+            src="image/logo.png"
+            alt="Логотип"
+            class="h-24 sm:h-32 lg:h-40 w-auto origin-left lg:transform lg:scale-125"
+          />
+        </a>
+
+        <!-- Меню для десктопа -->
+        <nav class="hidden lg:flex items-center space-x-8">
+          <a
+            href="#about"
+            class="nav-link text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            О курсе
+          </a>
+          <a
+            href="#program"
+            class="nav-link text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            Программа
+          </a>
+          <a
+            href="#resume"
+            class="nav-link text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            Резюме
+          </a>
+          <a
+            href="#reviews"
+            class="nav-link text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            Отзывы
+          </a>
+          <a
+            href="#pricing"
+            class="nav-link text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            Тарифы
+          </a>
+        </nav>
+
+        <!-- Кнопка CTA для десктопа -->
+        <a
+          href="#pricing"
+          class="hidden lg:inline-block bg-[#FF6F61] text-white font-bold py-2 px-6 rounded-lg shadow-lg hover:bg-[#ff5b4c] transition-all duration-300 transform hover:scale-105"
+        >
+          Записаться на курс
+        </a>
+
+        <!-- Кнопка бургер-меню для мобильных -->
+        <button id="menu-btn" class="lg:hidden z-50">
+          <i data-lucide="menu" class="w-8 h-8 text-white"></i>
+        </button>
+      </div>
+      <!-- Мобильное меню -->
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden fixed top-0 left-0 w-full h-screen bg-black/90 backdrop-blur-lg flex flex-col items-center justify-center space-y-8 text-2xl z-40"
+      >
+        <a
+          href="#about"
+          class="mobile-menu-link text-gray-300 hover:text-white transition-colors duration-300"
+        >
+          О курсе
+        </a>
+        <a
+          href="#program"
+          class="mobile-menu-link text-gray-300 hover:text-white transition-colors duration-300"
+        >
+          Программа
+        </a>
+        <a
+          href="#resume"
+          class="mobile-menu-link text-gray-300 hover:text-white transition-colors duration-300"
+        >
+          Резюме
+        </a>
+        <a
+          href="#reviews"
+          class="mobile-menu-link text-gray-300 hover:text-white transition-colors duration-300"
+        >
+          Отзывы
+        </a>
+        <a
+          href="#pricing"
+          class="mobile-menu-link text-gray-300 hover:text-white transition-colors duration-300"
+        >
+          Тарифы
+        </a>
+        <a
+          href="#pricing"
+          class="mt-8 mobile-menu-link bg-[#FF6F61] text-white font-bold py-3 px-8 rounded-lg"
+        >
+          Записаться
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Главный экран -->
+      <section
+        id="hero"
+        class="relative min-h-screen flex items-center justify-center overflow-hidden pt-40 sm:pt-48 lg:pt-64"
+      >
+        <div
+          id="hero-content"
+          class="relative z-10 text-center text-white px-6"
+        >
+          <h1
+            class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black font-montserrat uppercase tracking-wider reveal"
+          >
+            Стань графическим
+            <br />
+            дизайнером с нуля
+          </h1>
+          <p
+            class="mt-6 text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto reveal"
+            style="transition-delay: 200ms"
+          >
+            Онлайн-курс для новичков и творческих людей, который откроет вам
+            дверь в мир профессионального дизайна.
+          </p>
+          <!-- Новый CTA с Таймером -->
+          <div
+            class="mt-24 flex flex-col sm:flex-row items-center justify-center gap-4 reveal"
+            style="transition-delay: 400ms"
+          >
+            <!-- Главная кнопка -->
+            <a
+              href="#pricing"
+              class="flex items-center justify-center gap-3 bg-[#FF6F61] text-white font-bold py-4 px-8 rounded-full shadow-lg hover:bg-[#ff5b4c] transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
+            >
+              <span>Записаться на курс</span>
+              <div
+                class="bg-white/30 w-8 h-8 rounded-full flex items-center justify-center"
+              >
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </div>
+            </a>
+            <!-- Блок с таймером -->
+            <div
+              class="flex items-center gap-3 bg-gray-800/50 border border-gray-700 rounded-full p-2 text-sm w-full sm:w-auto"
+            >
+              <span
+                class="bg-yellow-400 text-gray-900 font-bold rounded-full px-4 py-2"
+              >
+                -40%
+              </span>
+              <span class="text-gray-300 hidden md:inline">
+                До конца скидки
+              </span>
+              <div
+                id="countdown"
+                class="flex items-center gap-1 bg-gray-900/70 rounded-full px-3 py-1 font-mono tracking-widest text-white"
+              >
+                <span id="hours">00</span>
+                :
+                <span id="minutes">00</span>
+                :
+                <span id="seconds">00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Анимированные линии -->
+        <div
+          class="absolute bottom-0 left-0 w-full h-1/3 overflow-hidden z-0 hidden lg:block"
+        >
+          <div class="line-reveal" id="line-a">
+            <div class="overlay"></div>
+            <div class="line"></div>
+          </div>
+          <div class="line-reveal" id="line-b">
+            <div class="overlay"></div>
+            <div class="line"></div>
+          </div>
+          <div class="line-reveal" id="line-c">
+            <div class="overlay"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок «О курсе» -->
+      <section id="about" class="py-20 md:py-32">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl md:text-5xl font-bold text-center text-white mb-16 reveal"
+          >
+            Что вы получите на курсе
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Преимущество -->
+            <div
+              class="bg-gray-900/50 p-8 rounded-xl border border-gray-800 text-center hover:bg-gray-800/60 hover:border-[#FF6F61] transition-all duration-300 transform hover:-translate-y-2 reveal"
+            >
+              <div class="inline-block p-4 bg-[#FF6F61]/10 rounded-full mb-6">
+                <i data-lucide="figma" class="w-10 h-10 text-[#fff]"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-3">
+                Мастерство в Figma
+              </h3>
+              <p class="text-gray-400">
+                Вы перестанете «тыкать наугад» и начнёте творить уверенно.
+                Сможете быстро собирать лендинги, мобильные интерфейсы и
+                прототипы так, как это делают в профессиональных студиях.
+              </p>
+            </div>
+            <!-- Преимущество -->
+            <div
+              class="bg-gray-900/50 p-8 rounded-xl border border-gray-800 text-center hover:bg-gray-800/60 hover:border-[#FF6F61] transition-all duration-300 transform hover:-translate-y-2 reveal"
+              style="transition-delay: 200ms"
+            >
+              <div class="inline-block p-4 bg-[#FF6F61]/10 rounded-full mb-6">
+                <i data-lucide="briefcase" class="w-10 h-10 text-[#fff]"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-3">
+                Сильное портфолио
+              </h3>
+              <p class="text-gray-400">
+                За время курса создадите четыре крутых проекта, которые не будут
+                пылиться в папке — они станут вашим пропуском к первым
+                заказчикам и работодателям.
+              </p>
+            </div>
+            <!-- Преимущество -->
+            <div
+              class="bg-gray-900/50 p-8 rounded-xl border border-gray-800 text-center hover:bg-gray-800/60 hover:border-[#FF6F61] transition-all duration-300 transform hover:-translate-y-2 reveal md:col-span-2 lg:col-span-1"
+              style="transition-delay: 400ms"
+            >
+              <div class="inline-block p-4 bg-[#FF6F61]/10 rounded-full mb-6">
+                <i data-lucide="users" class="w-10 h-10 text-[#fff]"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-3">
+                Поддержка сообщества
+              </h3>
+              <p class="text-gray-400">
+                Вы не останетесь один на один с вопросами: чат с кураторами и
+                единомышленниками — это ваша команда, которая всегда рядом и
+                помогает двигаться к результату.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Новый блок «Резюме после курса» -->
+      <section id="resume" class="py-20 md:py-32">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl md:text-5xl font-bold text-center text-white mb-16 reveal"
+          >
+            Ваше резюме после курса
+          </h2>
+          <div
+            class="bg-gray-900/50 p-4 sm:p-8 rounded-2xl border border-gray-800 grid grid-cols-1 lg:grid-cols-5 gap-8 reveal"
+          >
+            <!-- Левая колонка -->
+            <div class="lg:col-span-2 space-y-8 flex flex-col">
+              <!-- Слайдер профиля -->
+              <div
+                id="profile-slider"
+                class="bg-gray-800/50 p-6 rounded-xl text-center flex-grow flex flex-col justify-center items-center"
+              >
+                <div id="profile-slider-content">
+                  <img
+                    id="profile-avatar"
+                    src="image/avatars/avatar5.jpg"
+                    alt="Аватар выпускника"
+                    class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-700"
+                  />
+                  <p class="text-gray-400">Должность</p>
+                  <p id="profile-title" class="text-2xl font-bold text-white">
+                    Графический дизайнер
+                  </p>
+                  <p class="text-gray-400 mt-4">Желаемая зарплата</p>
+                  <p id="profile-salary" class="text-3xl font-bold text-white">
+                    90 000 ₽
+                  </p>
+                </div>
+              </div>
+              <!-- Слайдер работ -->
+              <div
+                class="bg-gray-800/50 rounded-xl relative overflow-hidden h-48 flex flex-col justify-center"
+              >
+                <div class="portfolio-slider">
+                  <div class="portfolio-slider-track">
+                    <!-- 10 работ -->
+                    <img
+                      src="image/works/banner.png"
+                      class="portfolio-slide rounded-lg object-cover"
+                    />
+                    <img
+                      src="image/works/corporate_identity.png"
+                      class="portfolio-slide rounded-lg object-cover"
+                    />
+                    <img
+                      src="image/works/logo.png"
+                      class="portfolio-slide rounded-lg object-cover"
+                    />
+                    <img
+                      src="image/works/webpage.png"
+                      class="portfolio-slide rounded-lg object-cover"
+                    />
+                    <img
+                      src="image/works/corporate_identity2.png"
+                      class="portfolio-slide rounded-lg object-cover"
+                    />
+                    <img
+                      src="image/works/logo2.png"
+                      class="portfolio-slide rounded-lg object-cover"
+                    />
+                    <img
+                      src="image/works/corporate_identity3.png"
+                      class="portfolio-slide rounded-lg object-cover"
+                    />
+                    <img
+                      src="image/works/corporate_identity4.png"
+                      class="portfolio-slide rounded-lg object-cover"
+                    />
+                    <img
+                      src="image/works/logo3.png"
+                      class="portfolio-slide rounded-lg object-cover"
+                    />
+                    <img
+                      src="image/works/logo4.png"
+                      class="portfolio-slide rounded-lg object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Правая колонка -->
+            <div class="lg:col-span-3">
+              <h3 class="text-2xl font-bold text-white mb-4">Навыки</h3>
+              <ul class="space-y-3 text-gray-300 mb-8">
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"
+                  ></i>
+                  <span>
+                    Фирменный стиль и айдентика — научитесь создавать цельный
+                    визуальный образ бренда, который выделяет среди конкурентов.
+                  </span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"
+                  ></i>
+                  <span>
+                    Дизайн для соцсетей — баннеры, креативы и посты, которые
+                    цепляют внимание и приносят результат.
+                  </span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"
+                  ></i>
+                  <span>
+                    Композиция и визуальная иерархия — собирать макеты так,
+                    чтобы взгляд сам шёл по нужному сценарию.
+                  </span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"
+                  ></i>
+                  <span>
+                    Работа с типографикой — подбирать шрифты и верстать тексты
+                    так, чтобы их было приятно читать.
+                  </span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"
+                  ></i>
+                  <span>
+                    Лендинги и сайты — от первых прототипов до стильного
+                    финального дизайна.
+                  </span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"
+                  ></i>
+                  <span>
+                    Нейросети в дизайне — использовать AI как ассистента для
+                    ускорения рутины и поиска свежих идей.
+                  </span>
+                </li>
+              </ul>
+              <h3 class="text-2xl font-bold text-white mb-6">Инструменты</h3>
+              <div class="flex flex-wrap gap-4">
+                <!-- Figma -->
+                <div
+                  class="group relative flex items-center gap-2 bg-gray-700/50 p-3 rounded-lg"
+                >
+                  <img
+                    src="image/icons/figma.png"
+                    alt="Figma"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-white font-medium">Figma</span>
+                  <div
+                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max bg-gray-900 text-white text-xs rounded-md py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                  >
+                    Создание интерфейсов и прототипов
+                  </div>
+                </div>
+                <div
+                  class="group relative flex items-center gap-2 bg-gray-700/50 p-3 rounded-lg"
+                >
+                  <img
+                    src="image/icons/photoshop.png"
+                    alt="Photoshop"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-white font-medium">Photoshop</span>
+                  <div
+                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max bg-gray-900 text-white text-xs rounded-md py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                  >
+                    Работа с растовой графикой
+                  </div>
+                </div>
+                <div
+                  class="group relative flex items-center gap-2 bg-gray-700/50 p-3 rounded-lg"
+                >
+                  <img
+                    src="image/icons/illustrator.png"
+                    alt="Illustrator"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-white font-medium">Illustrator</span>
+                  <div
+                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max bg-gray-900 text-white text-xs rounded-md py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                  >
+                    Работа с векторной графикой
+                  </div>
+                </div>
+                <div
+                  class="group relative flex items-center gap-2 bg-gray-700/50 p-3 rounded-lg"
+                >
+                  <img
+                    src="image/icons/chat-gpt.png"
+                    alt="Chat GPT"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-white font-medium">Chat GPT</span>
+                  <div
+                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max bg-gray-900 text-white text-xs rounded-md py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                  >
+                    Упрощает работу во всем
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- «Сколько получает дизайнер» -->
+      <section id="salaries" class="py-20 md:py-32 bg-gray-900/30">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl md:text-5xl font-bold text-center text-white mb-20 reveal"
+          >
+            Сколько получает
+            <br />
+            графический дизайнер
+          </h2>
+          <div class="max-w-4xl mx-auto grid sm:grid-cols-3 gap-8 items-end">
+            <!-- Уровень 1: После курса -->
+            <div class="text-center reveal">
+              <p class="text-lg text-gray-400">После курса</p>
+              <p class="text-4xl md:text-5xl font-bold text-white my-3">
+                <span class="salary-counter" data-target="70000">0</span>
+                ₽
+              </p>
+              <div class="h-24 bg-gray-800 rounded-lg mt-4">
+                <div
+                  class="bar-inner h-full w-full bg-gradient-to-b from-indigo-500 to-indigo-600 rounded-lg shadow-lg"
+                ></div>
+              </div>
+            </div>
+            <!-- От 1 года -->
+            <div class="text-center reveal" style="transition-delay: 200ms">
+              <p class="text-lg text-gray-400">От 1 года опыта</p>
+              <p class="text-4xl md:text-5xl font-bold text-white my-3">
+                <span class="salary-counter" data-target="90000">0</span>
+                ₽
+              </p>
+              <div class="h-40 bg-gray-800 rounded-lg mt-4">
+                <div
+                  class="bar-inner h-full w-full bg-gradient-to-b from-indigo-500 to-indigo-600 rounded-lg shadow-lg"
+                ></div>
+              </div>
+            </div>
+            <!-- От 3 лет -->
+            <div class="text-center reveal" style="transition-delay: 400ms">
+              <p class="text-lg text-gray-400">От 3 лет опыта</p>
+              <p class="text-4xl md:text-5xl font-bold text-white my-3">
+                от
+                <span class="salary-counter" data-target="150000">0</span>
+                ₽
+              </p>
+              <div class="h-64 bg-gray-800 rounded-lg mt-4">
+                <div
+                  class="bar-inner h-full w-full bg-gradient-to-b from-indigo-500 to-indigo-600 rounded-lg shadow-lg"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <p class="text-center text-gray-400 max-w-2xl mx-auto mt-12 reveal">
+            Не ждите окончания курса, чтобы стартовать карьеру. Первые заказы вы
+            сможете брать уже во время обучения, а после — у вас будет выбор:
+            идти работать в студию на позицию junior-дизайнера или строить
+            собственный фриланс-бизнес.
+          </p>
+        </div>
+      </section>
+
+      <!-- Блок «Программа курса» -->
+      <section id="program" class="py-20 md:py-32">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl md:text-5xl font-bold text-center text-white mb-16 reveal"
+          >
+            Программа курса
+          </h2>
+          <div class="max-w-3xl mx-auto space-y-4">
+            <!-- Модуль 1 -->
+            <div
+              class="accordion-item bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden reveal transition-all duration-300"
+            >
+              <button
+                class="accordion-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-800/40 transition-colors"
+              >
+                <div class="flex items-center">
+                  <span
+                    class="flex-shrink-0 w-10 h-10 bg-gray-800 text-[#FF6F61] font-bold text-lg rounded-full flex items-center justify-center mr-4 sm:mr-6"
+                  >
+                    01
+                  </span>
+                  <span class="text-lg sm:text-xl font-bold text-white">
+                    Основы дизайна и композиции
+                  </span>
+                </div>
+                <i
+                  data-lucide="plus"
+                  class="accordion-icon w-6 h-6 text-[#FF6F61] flex-shrink-0 ml-4"
+                ></i>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6" style="padding-left: 5rem">
+                  <p class="text-gray-400">
+                    Погружаемся в мир дизайна: теория цвета, типографика,
+                    визуальная иерархия и композиция. На практике — разбор
+                    кейсов лидеров рынка, чтобы понять, почему одни работы
+                    цепляют, а другие нет.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Модуль 2 -->
+            <div
+              class="accordion-item bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden reveal transition-all duration-300"
+            >
+              <button
+                class="accordion-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-800/40 transition-colors"
+              >
+                <div class="flex items-center">
+                  <span
+                    class="flex-shrink-0 w-10 h-10 bg-gray-800 text-[#FF6F61] font-bold text-lg rounded-full flex items-center justify-center mr-4 sm:mr-6"
+                  >
+                    02
+                  </span>
+                  <span class="text-lg sm:text-xl font-bold text-white">
+                    Работа в Figma. Базовый уровень
+                  </span>
+                </div>
+                <i
+                  data-lucide="plus"
+                  class="accordion-icon w-6 h-6 text-[#FF6F61] flex-shrink-0 ml-4"
+                ></i>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6" style="padding-left: 5rem">
+                  <p class="text-gray-400">
+                    Освоим интерфейс Figma: фреймы, фигуры, текст, стили.
+                    Создадим первый простой макет и увидим, как идеи
+                    превращаются в реальные интерфейсы.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Модуль 3 -->
+            <div
+              class="accordion-item bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden reveal transition-all duration-300"
+            >
+              <button
+                class="accordion-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-800/40 transition-colors"
+              >
+                <div class="flex items-center">
+                  <span
+                    class="flex-shrink-0 w-10 h-10 bg-gray-800 text-[#FF6F61] font-bold text-lg rounded-full flex items-center justify-center mr-4 sm:mr-6"
+                  >
+                    03
+                  </span>
+                  <span class="text-lg sm:text-xl font-bold text-white">
+                    Figma. Продвинутые техники
+                  </span>
+                </div>
+                <i
+                  data-lucide="plus"
+                  class="accordion-icon w-6 h-6 text-[#FF6F61] flex-shrink-0 ml-4"
+                ></i>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6" style="padding-left: 5rem">
+                  <p class="text-gray-400">
+                    Компоненты, auto layout, варианты и интерактивные прототипы.
+                    Научимся строить адаптивные дизайн-системы, которые легко
+                    масштабируются под любые проекты.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Модуль 4 -->
+            <div
+              class="accordion-item bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden reveal transition-all duration-300"
+            >
+              <button
+                class="accordion-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-800/40 transition-colors"
+              >
+                <div class="flex items-center">
+                  <span
+                    class="flex-shrink-0 w-10 h-10 bg-gray-800 text-[#FF6F61] font-bold text-lg rounded-full flex items-center justify-center mr-4 sm:mr-6"
+                  >
+                    04
+                  </span>
+                  <span class="text-lg sm:text-xl font-bold text-white">
+                    Дизайн для соцсетей и рекламы
+                  </span>
+                </div>
+                <i
+                  data-lucide="plus"
+                  class="accordion-icon w-6 h-6 text-[#FF6F61] flex-shrink-0 ml-4"
+                ></i>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6" style="padding-left: 5rem">
+                  <p class="text-gray-400">
+                    Научимся создавать баннеры, сторис, рекламные креативы и
+                    посты, которые цепляют внимание и повышают продажи.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Модуль 5 -->
+            <div
+              class="accordion-item bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden reveal transition-all duration-300"
+            >
+              <button
+                class="accordion-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-800/40 transition-colors"
+              >
+                <div class="flex items-center">
+                  <span
+                    class="flex-shrink-0 w-10 h-10 bg-gray-800 text-[#FF6F61] font-bold text-lg rounded-full flex items-center justify-center mr-4 sm:mr-6"
+                  >
+                    05
+                  </span>
+                  <span class="text-lg sm:text-xl font-bold text-white">
+                    Использование нейросетей в дизайне
+                  </span>
+                </div>
+                <i
+                  data-lucide="plus"
+                  class="accordion-icon w-6 h-6 text-[#FF6F61] flex-shrink-0 ml-4"
+                ></i>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6" style="padding-left: 5rem">
+                  <p class="text-gray-400">
+                    Разберём, как использовать AI-инструменты для генерации
+                    идей, ускорения рутинных задач и создания уникальных
+                    визуальных решений.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Модуль 6 -->
+            <div
+              class="accordion-item bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden reveal transition-all duration-300"
+            >
+              <button
+                class="accordion-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-800/40 transition-colors"
+              >
+                <div class="flex items-center">
+                  <span
+                    class="flex-shrink-0 w-10 h-10 bg-gray-800 text-[#FF6F61] font-bold text-lg rounded-full flex items-center justify-center mr-4 sm:mr-6"
+                  >
+                    06
+                  </span>
+                  <span class="text-lg sm:text-xl font-bold text-white">
+                    Дипломный проект и портфолио
+                  </span>
+                </div>
+                <i
+                  data-lucide="plus"
+                  class="accordion-icon w-6 h-6 text-[#FF6F61] flex-shrink-0 ml-4"
+                ></i>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6" style="padding-left: 5rem">
+                  <p class="text-gray-400">
+                    С нуля создадим реальный проект, оформим его в кейс для
+                    Behance и получите готовый проект для своего портфолио — то,
+                    что реально привлекает клиентов.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок «Отзывы учеников» -->
+      <section id="reviews" class="py-20 md:py-32">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl md:text-5xl font-bold text-center text-white mb-16 reveal"
+          >
+            Что говорят наши ученики
+          </h2>
+          <div class="relative max-w-4xl mx-auto overflow-hidden">
+            <div id="slider" class="flex slider-container">
+              <!-- Отзыв -->
+              <div class="flex-shrink-0 w-full p-4">
+                <div
+                  class="bg-gray-900/50 p-6 sm:p-8 rounded-xl border border-gray-800 text-center"
+                >
+                  <img
+                    src="image/avatars/avatar6.jpg"
+                    alt="Фото ученика"
+                    class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-[#FF6F61]"
+                  />
+                  <p class="text-gray-400 italic mb-4">
+                    "Этот курс стал переломным моментом в моей жизни! Раньше я
+                    работал в совсем другой сфере, а теперь смело могу называть
+                    себя дизайнером. Благодаря понятной подаче материала и
+                    постоянной практике, я уже устроился в студию своей мечты и
+                    чувствую, что расту с каждым проектом. Огромное спасибо
+                    команде курса за поддержку и реальные навыки!"
+                  </p>
+                  <h4 class="text-xl font-bold text-white">Печурин Иван</h4>
+                  <p class="text-[#FF6F61]">Выпускник 2025</p>
+                </div>
+              </div>
+              <!-- Отзыв -->
+              <div class="flex-shrink-0 w-full p-4">
+                <div
+                  class="bg-gray-900/50 p-6 sm:p-8 rounded-xl border border-gray-800 text-center"
+                >
+                  <img
+                    src="image/avatars/avatar7.jpg"
+                    alt="Фото ученика"
+                    class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-[#FF6F61]"
+                  />
+                  <p class="text-gray-400 italic mb-4">
+                    "Невероятно полезный курс! Практики здесь намного больше,
+                    чем теории, и каждый урок даёт ощутимый результат.
+                    Преподаватель объясняет всё просто и понятно, а после первых
+                    занятий я уже смогла взять свой первый заказ на фрилансе.
+                    Теперь я увереннее работаю с клиентами и вижу, как растет
+                    мой доход и портфолио!"
+                  </p>
+                  <h4 class="text-xl font-bold text-white">Влашина Людмила</h4>
+                  <p class="text-[#FF6F61]">Выпускник 2025</p>
+                </div>
+              </div>
+              <!-- Отзыв -->
+              <div class="flex-shrink-0 w-full p-4">
+                <div
+                  class="bg-gray-900/50 p-6 sm:p-8 rounded-xl border border-gray-800 text-center"
+                >
+                  <img
+                    src="image/avatars/avatar8.jpg"
+                    alt="Фото ученика"
+                    class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-[#FF6F61]"
+                  />
+                  <p class="text-gray-400 italic mb-4">
+                    "Сначала сомневался, стоит ли тратить время и деньги на
+                    обучение, но курс полностью превзошёл мои ожидания!
+                    Атмосфера дружелюбная, поддержка преподавателей и кураторов
+                    постоянная, а знания настолько практичные, что уже после
+                    нескольких заданий я чувствовал себя настоящим дизайнером.
+                    Это обучение дало мне уверенность и первые реальные проекты
+                    для портфолио."
+                  </p>
+                  <h4 class="text-xl font-bold text-white">Самусенко Кирилл</h4>
+                  <p class="text-[#FF6F61]">Выпускник 2025</p>
+                </div>
+              </div>
+            </div>
+            <!-- Навигация слайдера -->
+            <button
+              id="prevBtn"
+              class="absolute top-1/2 left-0 -translate-y-1/2 bg-gray-800/50 p-2 rounded-full hover:bg-[#FF6F61] transition-colors"
+            >
+              <i data-lucide="chevron-left" class="text-white"></i>
+            </button>
+            <button
+              id="nextBtn"
+              class="absolute top-1/2 right-0 -translate-y-1/2 bg-gray-800/50 p-2 rounded-full hover:bg-[#FF6F61] transition-colors"
+            >
+              <i data-lucide="chevron-right" class="text-white"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок «Цена и тарифы» -->
+      <section id="pricing" class="py-20 md:py-32 bg-gray-900/30">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl md:text-5xl font-bold text-center text-white mb-16 reveal"
+          >
+            Выберите свой тариф
+          </h2>
+          <div
+            class="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-8"
+          >
+            <!-- Тариф Базовый -->
+            <div
+              class="w-full sm:w-3/4 md:w-2/3 lg:w-1/3 bg-gray-900/50 p-8 rounded-xl border border-gray-800 hover:border-[#FF6F61] transition-all duration-300 transform hover:scale-105 reveal flex flex-col"
+            >
+              <h3 class="text-2xl font-bold text-white">Базовый</h3>
+              <p class="text-gray-400 mt-2">«Самостоятельное изучение»</p>
+              <p class="text-5xl font-extrabold text-white my-6">15 000 ₽</p>
+              <ul class="space-y-3 text-gray-300">
+                <li class="flex items-center">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-2"
+                  ></i>
+                  Доступ ко всем модулям
+                </li>
+                <li class="flex items-center">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-2"
+                  ></i>
+                  Домашние задания для закрепления навыков
+                </li>
+                <li class="flex items-center text-gray-500">
+                  <i data-lucide="x" class="w-5 h-5 text-red-500 mr-2"></i>
+                  Проверка ДЗ опытным куратором
+                </li>
+                <li class="flex items-center text-gray-500">
+                  <i data-lucide="x" class="w-5 h-5 text-red-500 mr-2"></i>
+                  Доступ в чат с куратором для вопросов и советов
+                </li>
+              </ul>
+              <a href="https://t.me/ARTpixelOfficial" target="_blank">
+                <button
+                  class="mt-6 w-full bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition-colors"
+                >
+                  Выбрать
+                </button>
+              </a>
+            </div>
+            <!-- Тариф Полный (рекомендуемый) -->
+            <div
+              class="w-full sm:w-3/4 md:w-2/3 lg:w-1/3 bg-[#FF6F61]/10 p-8 rounded-xl border-2 border-[#FF6F61] relative transform lg:scale-105 reveal flex flex-col"
+              style="transition-delay: 200ms"
+            >
+              <div
+                class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-[#FF6F61] text-white text-sm font-bold px-4 py-1 rounded-full"
+              >
+                РЕКОМЕНДУЕМ
+              </div>
+              <h3 class="text-2xl font-bold text-white">Полный</h3>
+              <p class="text-gray-400 mt-2">«С поддержкой и проверкой»</p>
+              <p class="text-5xl font-extrabold text-white my-6">30 000 ₽</p>
+              <ul class="space-y-3 text-gray-300">
+                <li class="flex items-center">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-2"
+                  ></i>
+                  Всё из тарифа «Базовый»
+                </li>
+                <li class="flex items-center">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-2"
+                  ></i>
+                  Постоянная проверка домашних заданий
+                </li>
+                <li class="flex items-center">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-2"
+                  ></i>
+                  Активное участие кураторов в чате
+                </li>
+                <li class="flex items-center">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-2"
+                  ></i>
+                  Советы по улучшению портфолио
+                </li>
+              </ul>
+              <a href="https://t.me/ARTpixelOfficial" target="_blank">
+                <button
+                  class="mt-6 w-full bg-[#FF6F61] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#ff5b4c] transition-colors"
+                >
+                  Записаться
+                </button>
+              </a>
+            </div>
+            <!-- Тариф VIP -->
+            <div
+              class="w-full sm:w-3/4 md:w-2/3 lg:w-1/3 bg-gray-900/50 p-8 rounded-xl border border-gray-800 hover:border-[#FF6F61] transition-all duration-300 transform hover:scale-105 reveal flex flex-col"
+              style="transition-delay: 400ms"
+            >
+              <h3 class="text-2xl font-bold text-white">VIP</h3>
+              <p class="text-gray-400 mt-2">«Персональный коучинг»</p>
+              <p class="text-5xl font-extrabold text-white my-6">50 000 ₽</p>
+              <ul class="space-y-3 text-gray-300">
+                <li class="flex items-center">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-2"
+                  ></i>
+                  Всё из тарифа «Полный»
+                </li>
+                <li class="flex items-center">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-2"
+                  ></i>
+                  Личные консультации с наставником
+                </li>
+                <li class="flex items-center">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-2"
+                  ></i>
+                  Помощь в трудоустройстве и поиске первых клиентов
+                </li>
+                <li class="flex items-center">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-green-500 mr-2"
+                  ></i>
+                  Разработка портфолио под реальные проекты
+                </li>
+              </ul>
+              <a href="https://t.me/ARTpixelOfficial" target="_blank">
+                <button
+                  class="mt-6 w-full bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition-colors"
+                >
+                  Выбрать
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок «Преподаватель» -->
+      <section id="teacher" class="py-20 md:py-32">
+        <div class="container mx-auto px-6">
+          <div
+            class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center"
+          >
+            <div class="reveal">
+              <img
+                src="image/teacher.webp"
+                alt="Фото преподавателя"
+                class="rounded-xl shadow-2xl w-full"
+              />
+            </div>
+            <div class="reveal" style="transition-delay: 200ms">
+              <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">
+                Ваш преподаватель
+              </h2>
+              <h3 class="text-2xl font-bold text-[#FF6F61] mb-6">
+                Екатерина Новикова
+              </h3>
+              <p class="text-gray-400 mb-4">
+                Арт-директор с 10-летним опытом работы в топовых
+                digital-агентствах. Работала с брендами вроде Yandex, Sber и
+                Avito, а её работы не раз появлялись на Awwwards и
+                CSSDesignAwards.
+              </p>
+              <p class="text-gray-400">
+                Я не просто научу вас Figma — я помогу мыслить как дизайнер:
+                видеть идеальный баланс цвета и формы, придумывать креативные
+                решения и находить свой уникальный стиль. Вместе мы создадим
+                проекты, которые будут вдохновлять вас и открывать двери в
+                реальный мир дизайна.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- «Консультация» -->
+      <section id="consultation" class="py-20 md:py-32">
+        <div class="container mx-auto px-6">
+          <div
+            class="bg-gray-900/50 p-4 sm:p-8 md:p-12 rounded-2xl border border-gray-800 reveal"
+          >
+            <h2
+              class="text-3xl md:text-5xl font-bold text-center text-white mb-4"
+            >
+              Оставьте заявку на
+            </h2>
+            <h2
+              class="text-3xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
+            >
+              бесплатную консультацию
+            </h2>
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 mb-12 text-center md:text-left"
+            >
+              <div class="flex items-center gap-3">
+                <i
+                  data-lucide="check-circle-2"
+                  class="w-8 h-8 text-yellow-400"
+                ></i>
+                <span class="text-gray-300">
+                  Вышлем подробную
+                  <br class="hidden sm:inline" />
+                  программу
+                </span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i
+                  data-lucide="check-circle-2"
+                  class="w-8 h-8 text-yellow-400"
+                ></i>
+                <span class="text-gray-300">
+                  Расскажем про профессию,
+                  <br class="hidden sm:inline" />
+                  навыки, зарплату
+                </span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i
+                  data-lucide="check-circle-2"
+                  class="w-8 h-8 text-yellow-400"
+                ></i>
+                <span class="text-gray-300">
+                  Ответим на все
+                  <br class="hidden sm:inline" />
+                  ваши вопросы
+                </span>
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+            >
+              <div>
+                <img
+                  src="image/consultant.png"
+                  alt="Консультация по курсу"
+                  class="rounded-2xl shadow-lg w-full h-full object-cover"
+                />
+              </div>
+              <div class="relative bg-white p-6 sm:p-8 rounded-2xl shadow-2xl">
+                <!-- Toast -->
+                <div
+                  id="toast"
+                  class="absolute left-1/2 transform -translate-x-1/2 -translate-y-full hidden z-50"
+                >
+                  <div
+                    id="toast-alert"
+                    class="p-4 rounded-lg flex items-center space-x-3 shadow-lg transition-all duration-300"
+                  >
+                    <span
+                      id="toast-badge"
+                      class="flex rounded-full px-2 py-1 text-xs font-bold uppercase"
+                    ></span>
+                    <span id="toast-text" class="font-medium"></span>
+                    <button
+                      id="toast-close"
+                      class="ml-auto text-white hover:opacity-70"
+                    >
+                      &times;
+                    </button>
+                  </div>
+                </div>
+
+                <form id="consultation-form" class="space-y-6">
+                  <div>
+                    <label for="name" class="hidden">Имя</label>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Имя"
+                      class="w-full p-4 rounded-lg bg-gray-100 text-gray-800 border border-gray-200 focus:ring-2 focus:ring-[#FF6F61] focus:outline-none transition"
+                    />
+                  </div>
+                  <div>
+                    <label for="email" class="hidden">Электронная почта</label>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="Электронная почта"
+                      class="w-full p-4 rounded-lg bg-gray-100 text-gray-800 border border-gray-200 focus:ring-2 focus:ring-[#FF6F61] focus:outline-none transition"
+                    />
+                  </div>
+                  <div>
+                    <label for="phone" class="hidden">Телефон</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      placeholder="+7 (000) 000-00-00"
+                      class="w-full p-4 rounded-lg bg-gray-100 text-gray-800 border border-gray-200 focus:ring-2 focus:ring-[#FF6F61] focus:outline-none transition"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="w-full bg-gray-800 text-white font-bold py-4 px-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105"
+                  >
+                    Получить консультацию
+                  </button>
+                  <div class="text-center text-xs text-gray-500">
+                    <input
+                      type="checkbox"
+                      id="consent"
+                      class="mr-2 accent-[#FF6F61]"
+                      checked
+                    />
+                    <label for="consent">
+                      Я соглашаюсь на обработку персональных данных
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок «FAQ» -->
+      <section id="faq" class="py-20 md:py-32 bg-gray-900/30">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl md:text-5xl font-bold text-center text-white mb-16 reveal"
+          >
+            Часто задаваемые вопросы
+          </h2>
+          <div class="max-w-3xl mx-auto space-y-4">
+            <!-- Вопрос 1 -->
+            <div
+              class="accordion-item bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden reveal transition-all duration-300"
+            >
+              <button
+                class="accordion-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-800/40 transition-colors"
+              >
+                <span class="text-lg sm:text-xl font-bold text-white">
+                  Нужны ли начальные навыки рисования?
+                </span>
+                <i
+                  data-lucide="plus"
+                  class="accordion-icon w-6 h-6 text-[#FF6F61] flex-shrink-0 ml-4"
+                ></i>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6 pt-2">
+                  <p class="text-gray-400 border-l-2 border-gray-700 pl-6">
+                    Совсем нет! Курс создан для новичков. Мы разберем всё с
+                    нуля: композицию, теорию цвета, работу с формой и шрифтом.
+                    Рисование — это бонус, но оно не обязательное.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Вопрос 2 -->
+            <div
+              class="accordion-item bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden reveal transition-all duration-300"
+            >
+              <button
+                class="accordion-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-800/40 transition-colors"
+              >
+                <span class="text-lg sm:text-xl font-bold text-white">
+                  Какой компьютер нужен для курса?
+                </span>
+                <i
+                  data-lucide="plus"
+                  class="accordion-icon w-6 h-6 text-[#FF6F61] flex-shrink-0 ml-4"
+                ></i>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6 pt-2">
+                  <p class="text-gray-400 border-l-2 border-gray-700 pl-6">
+                    Figma работает прямо в браузере, поэтому подойдет
+                    практически любой современный ноутбук или ПК. Для комфортной
+                    работы рекомендуем 8 ГБ оперативной памяти и стабильное
+                    подключение к интернету.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Вопрос 3 -->
+            <div
+              class="accordion-item bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden reveal transition-all duration-300"
+            >
+              <button
+                class="accordion-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-800/40 transition-colors"
+              >
+                <span class="text-lg sm:text-xl font-bold text-white">
+                  Смогу ли я найти работу после курса?
+                </span>
+                <i
+                  data-lucide="plus"
+                  class="accordion-icon w-6 h-6 text-[#FF6F61] flex-shrink-0 ml-4"
+                ></i>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6 pt-2">
+                  <p class="text-gray-400 border-l-2 border-gray-700 pl-6">
+                    Да! К концу обучения вы создадите сильное портфолио из 4
+                    проектов. Мы проводим вебинар по трудоустройству, помогаем с
+                    резюме и подготовкой к собеседованиям. Множество выпускников
+                    уже получили первые заказы или устроились на позиции
+                    младшего дизайнера.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Вопрос 4 -->
+            <div
+              class="accordion-item bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden reveal transition-all duration-300"
+            >
+              <button
+                class="accordion-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-800/40 transition-colors"
+              >
+                <span class="text-lg sm:text-xl font-bold text-white">
+                  Сколько времени займет обучение?
+                </span>
+                <i
+                  data-lucide="plus"
+                  class="accordion-icon w-6 h-6 text-[#FF6F61] flex-shrink-0 ml-4"
+                ></i>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6 pt-2">
+                  <p class="text-gray-400 border-l-2 border-gray-700 pl-6">
+                    Курс рассчитан на 8–10 недель при активном прохождении всех
+                    заданий. Но вы можете проходить модули в удобном темпе —
+                    доступ к материалам сохраняется навсегда.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Вопрос 5 -->
+            <div
+              class="accordion-item bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden reveal transition-all duration-300"
+            >
+              <button
+                class="accordion-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-800/40 transition-colors"
+              >
+                <span class="text-lg sm:text-xl font-bold text-white">
+                  Можно ли совмещать курс с работой или учебой?
+                </span>
+                <i
+                  data-lucide="plus"
+                  class="accordion-icon w-6 h-6 text-[#FF6F61] flex-shrink-0 ml-4"
+                ></i>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6 pt-2">
+                  <p class="text-gray-400 border-l-2 border-gray-700 pl-6">
+                    Конечно! Все уроки онлайн, а домашние задания можно
+                    выполнять в любое время. Главное — уделять хотя бы пару
+                    часов в день, чтобы закреплять материал на практике.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Вопрос 6 -->
+            <div
+              class="accordion-item bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden reveal transition-all duration-300"
+            >
+              <button
+                class="accordion-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-800/40 transition-colors"
+              >
+                <span class="text-lg sm:text-xl font-bold text-white">
+                  Будет ли поддержка во время курса?
+                </span>
+                <i
+                  data-lucide="plus"
+                  class="accordion-icon w-6 h-6 text-[#FF6F61] flex-shrink-0 ml-4"
+                ></i>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6 pt-2">
+                  <p class="text-gray-400 border-l-2 border-gray-700 pl-6">
+                    Да, у вас будет доступ к чату с кураторами и другими
+                    участниками. Любой вопрос будет рассмотрен, и вы всегда
+                    получите обратную связь по своим проектам.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="bg-gray-900/50">
+      <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+        <div class="flex justify-center space-x-6 mb-6">
+          <a
+            href="https://www.instagram.com/ARTpixelOfficial"
+            target="_blank"
+            class="hover:text-[#FF6F61] transition-colors"
+          >
+            <i data-lucide="instagram" class="w-6 h-6"></i>
+          </a>
+          <a
+            href="https://t.me/ARTpixelClub"
+            target="_blank"
+            class="hover:text-[#FF6F61] transition-colors"
+          >
+            <i data-lucide="send" class="w-6 h-6"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/@ARTpixelOfficial"
+            target="_blank"
+            class="hover:text-[#FF6F61] transition-colors"
+          >
+            <i data-lucide="youtube" class="w-6 h-6"></i>
+          </a>
+        </div>
+        <p>&copy; 2025 ARTpixel. Все права защищены.</p>
+        <p class="text-sm mt-2">contact@artpixel.ru</p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

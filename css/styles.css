@@ -1,0 +1,172 @@
+/* Настройка шрифтов через Tailwind */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0A0A0A;
+    color: #E0E0E0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+.font-montserrat {
+     font-family: 'Montserrat', sans-serif;
+}
+
+/* Анимации появления элементов */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Стили аккордеона */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.accordion-item.open .accordion-content {
+    max-height: 500px;
+}
+.accordion-item.open .accordion-icon {
+    transform: rotate(45deg);
+}
+.accordion-icon {
+    transition: transform 0.3s ease-in-out;
+}
+.accordion-item.open {
+    border-color: #FF6F61;
+    background-color: rgba(255, 111, 97, 0.05);
+}
+
+
+/* Стили слайдера */
+.slider-container {
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Стили анимированного графика зарплат */
+.bar-inner {
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.bar-inner.animate {
+    transform: scaleY(1);
+}
+
+/* Анимация слайдера профиля */
+#profile-slider-content {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Анимация слайдера работ */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.portfolio-slider-track {
+    display: flex;
+    width: calc(200px * 20);
+    animation: scroll 40s linear infinite;
+}
+.portfolio-slider-track:hover {
+    animation-play-state: paused;
+}
+.portfolio-slide {
+    width: 200px;
+    height: 200px;
+    margin: 0 10px;
+}
+
+/* Анимация подчеркивания в меню */
+.nav-link {
+    position: relative;
+    padding-bottom: 6px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FF6F61;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Стили анимированных линий */
+.line-reveal {
+    width: 120%;
+    height: 3px;
+    overflow: hidden;
+    position: absolute;
+}
+.line-reveal .overlay {
+    background: #0A0A0A;
+    height: 10px;
+    position: absolute;
+    top: -5px;
+    width: 100%;
+    transform-origin: 100% 0;
+    animation: wipe 3s ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+.line-reveal .line {
+    border: 3px dashed white;
+    backface-visibility: hidden;
+}
+
+#line-a {
+    left: 0;
+    top: 60%;
+    transform-origin: 0 0;
+    transform: rotate(-50deg);
+}
+#line-a .line {
+    border-color: #ff9900;
+}
+
+#line-b {
+    left: 0;
+    bottom: 20%;
+    transform-origin: 0 0;
+    transform: rotate(-5deg);
+}
+#line-b .overlay {
+    animation-delay: .5s;
+}
+#line-b .line {
+    border-color: #ff0099;
+}
+
+#line-c {
+    right: 10%;
+    bottom: 0;
+    transform-origin: 100% 0;
+    transform: rotate(70deg);
+}
+#line-c .overlay {
+    animation-delay: 1s;
+}
+#line-c .line {
+    border-color: #0099ff;
+}
+
+@keyframes wipe {
+    to {
+        transform: scaleX(0);
+    }
+}
