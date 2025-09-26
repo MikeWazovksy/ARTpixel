@@ -64,22 +64,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Анимация слайдера работ */
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+.portfolio-slider {
+  overflow: hidden;
+  width: 100%;
 }
+
 .portfolio-slider-track {
     display: flex;
-    width: calc(200px * 20);
-    animation: scroll 40s linear infinite;
+    gap: 4px;
 }
+
 .portfolio-slider-track:hover {
     animation-play-state: paused;
 }
+
 .portfolio-slide {
-    width: 200px;
-    height: 200px;
-    margin: 0 10px;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 /* Анимация подчеркивания в меню */

@@ -82,8 +82,12 @@
         </a>
 
         <!-- Кнопка бургер-меню для мобильных -->
-        <button id="menu-btn" class="lg:hidden z-50">
-          <i data-lucide="menu" class="w-8 h-8 text-white"></i>
+        <button id="menu-btn" class="lg:hidden z-50 relative w-8 h-8">
+          <i data-lucide="menu" class="menu-icon w-8 h-8 text-white"></i>
+          <i
+            data-lucide="circle-x"
+            class="close-icon hidden w-8 h-8 text-white"
+          ></i>
         </button>
       </div>
       <!-- Мобильное меню -->
@@ -320,47 +324,6 @@
                 <div class="portfolio-slider">
                   <div class="portfolio-slider-track">
                     <!-- 10 работ -->
-                    <img
-                      src="image/works/banner.png"
-                      class="portfolio-slide rounded-lg object-cover"
-                    />
-                    <img
-                      src="image/works/corporate_identity.png"
-                      class="portfolio-slide rounded-lg object-cover"
-                    />
-                    <img
-                      src="image/works/logo.png"
-                      class="portfolio-slide rounded-lg object-cover"
-                    />
-                    <img
-                      src="image/works/webpage.png"
-                      class="portfolio-slide rounded-lg object-cover"
-                    />
-                    <img
-                      src="image/works/corporate_identity2.png"
-                      class="portfolio-slide rounded-lg object-cover"
-                    />
-                    <img
-                      src="image/works/logo2.png"
-                      class="portfolio-slide rounded-lg object-cover"
-                    />
-                    <img
-                      src="image/works/corporate_identity3.png"
-                      class="portfolio-slide rounded-lg object-cover"
-                    />
-                    <img
-                      src="image/works/corporate_identity4.png"
-                      class="portfolio-slide rounded-lg object-cover"
-                    />
-                    <img
-                      src="image/works/logo3.png"
-                      class="portfolio-slide rounded-lg object-cover"
-                    />
-                    <img
-                      src="image/works/logo4.png"
-                      class="portfolio-slide rounded-lg object-cover"
-                    />
-                    <!-- Дубликат , для вида бесконечности-->
                     <img
                       src="image/works/banner.png"
                       class="portfolio-slide rounded-lg object-cover"
@@ -1210,11 +1173,13 @@
                   >
                     Получить консультацию
                   </button>
-                  <div class="text-center text-xs text-gray-500">
+                  <div
+                    class="text-center text-xs text-gray-500 flex items-center justify-center gap-x-2"
+                  >
                     <input
                       type="checkbox"
                       id="consent"
-                      class="mr-2 accent-[#FF6F61]"
+                      class="accent-[#FF6F61] flex-shrink-0 ml-2 sm:ml-0"
                       checked
                     />
                     <label for="consent">
