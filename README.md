@@ -32,7 +32,7 @@ project/
 
 1. Скачайте или клонируйте проект:
    ```bash
-   git clone https://github.com/MikeWazovksy/ARTpixel.git
+   git clone https://github.com/RohaCode/ARTpixel.git
    ```
 2. Перейдите в папку проекта:
    ```bash
