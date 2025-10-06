@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const track = document.querySelector('.portfolio-slider-track');
   if (!track) return;
 
-  // Дубликать слайда
   track.innerHTML += track.innerHTML;
 
   let offset = 0;
@@ -20,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   animate();
 
-  // Инициализация иконок Lucide
   lucide.createIcons();
 
   const menuBtn = document.getElementById('menu-btn');
@@ -30,14 +28,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuIcon = menuBtn.querySelector('.menu-icon');
   const closeIcon = menuBtn.querySelector('.close-icon');
 
-  // Клик по кнопке меню
   menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
     menuIcon.classList.toggle('hidden');
     closeIcon.classList.toggle('hidden');
   });
 
-  // Закрытие меню при клике на любую ссылку
   mobileMenuLinks.forEach((link) => {
     link.addEventListener('click', () => {
       mobileMenu.classList.add('hidden');
@@ -46,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Параллакс главного экрана
   const heroContent = document.getElementById('hero-content');
   window.addEventListener('mousemove', (e) => {
     if (window.innerWidth > 768) {
@@ -57,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Таймер обратного отсчета
   function startCountdown() {
     const countdownElement = document.getElementById('countdown');
     if (!countdownElement) return;
@@ -95,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   startCountdown();
 
-  // Анимация появления элементов при скролле
   const revealElements = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver(
     (entries) => {
@@ -112,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function () {
   );
   revealElements.forEach((el) => observer.observe(el));
 
-  // Анимация блока "Резюме после курса"
   const profiles = [
     {
       avatar: 'image/avatars/avatar1.jpg',
@@ -157,7 +149,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 4000);
   }
 
-  // Анимация блока зарплат
   const salariesSection = document.getElementById('salaries');
   if (salariesSection) {
     const salaryCounters = salariesSection.querySelectorAll('.salary-counter');
@@ -200,7 +191,6 @@ document.addEventListener('DOMContentLoaded', function () {
     salaryObserver.observe(salariesSection);
   }
 
-  // Логика аккордеонов
   const accordionToggles = document.querySelectorAll('.accordion-toggle');
   accordionToggles.forEach((toggle) => {
     toggle.addEventListener('click', () => {
@@ -209,7 +199,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Слайдер отзывов
   const slider = document.getElementById('slider');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
@@ -254,9 +243,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     startSlider();
   }
+
+  const toTopBtn = document.getElementById('to-top-btn');
+  if (toTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        toTopBtn.classList.remove('opacity-0', 'translate-y-4');
+      } else {
+        toTopBtn.classList.add('opacity-0', 'translate-y-4');
+      }
+    });
+
+    toTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    });
+  }
 });
 
-// --- Функции валидации ---
 function validateName(name) {
   const regex = /^[a-zA-Zа-яА-ЯёЁ\s]+$/;
   return regex.test(name.trim());
@@ -272,7 +278,6 @@ function validatePhone(phone) {
   return regex.test(phone.trim());
 }
 
-// --- Автодобавление +7 ---
 const phoneInput = document.getElementById('phone');
 phoneInput.addEventListener('input', function () {
   if (!this.value.startsWith('+7')) {
@@ -315,14 +320,12 @@ function showToast(message, type = 'info') {
   toast.classList.remove('hidden');
   toast.classList.add('opacity-100');
 
-  // Авто-скрытие через 5 секунд
   setTimeout(() => {
     toast.classList.add('opacity-0');
     setTimeout(() => toast.classList.add('hidden'), 300);
   }, 5000);
 }
 
-// Закрытие кнопкой
 document.getElementById('toast-close').addEventListener('click', () => {
   const toast = document.getElementById('toast');
   toast.classList.add('opacity-0');
@@ -344,7 +347,6 @@ formButton.addEventListener('click', function (e) {
   let message = '';
   let type = '';
 
-  // Проверяем пустые поля
   if (!name || !email || !phone) {
     message = 'Все поля должны быть заполнены';
     type = 'error';
@@ -365,4 +367,21 @@ formButton.addEventListener('click', function (e) {
   }
 
   showToast(message, type);
+});
+
+const toTopBtn = document.getElementById('to-top-btn');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    toTopBtn.classList.remove('opacity-0', 'translate-y-4');
+  } else {
+    toTopBtn.classList.add('opacity-0', 'translate-y-4');
+  }
+});
+
+toTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
 });

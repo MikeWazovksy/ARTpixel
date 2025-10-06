@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Курс по графическому дизайну | Стань дизайнером с нуля</title>
     <link rel="icon" href="image/favicon.png" type="image/png" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,7 +14,6 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body class="antialiased">
     <header id="header" class="absolute top-0 left-0 right-0 z-20">
@@ -273,6 +273,7 @@
                     src="image/avatars/avatar5.jpg"
                     alt="Аватар выпускника"
                     class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-700"
+                    loading="lazy"
                   />
                   <p class="text-gray-400">Должность</p>
                   <p id="profile-title" class="text-2xl font-bold text-white">
@@ -292,42 +293,52 @@
                     <img
                       src="image/works/banner.webp"
                       class="portfolio-slide rounded-lg object-cover"
+                      loading="lazy"
                     />
                     <img
                       src="image/works/corporate_identity.webp"
                       class="portfolio-slide rounded-lg object-cover"
+                      loading="lazy"
                     />
                     <img
                       src="image/works/logo.webp"
                       class="portfolio-slide rounded-lg object-cover"
+                      loading="lazy"
                     />
                     <img
                       src="image/works/webpage.webp"
                       class="portfolio-slide rounded-lg object-cover"
+                      loading="lazy"
                     />
                     <img
                       src="image/works/corporate_identity2.webp"
                       class="portfolio-slide rounded-lg object-cover"
+                      loading="lazy"
                     />
                     <img
                       src="image/works/logo2.webp"
                       class="portfolio-slide rounded-lg object-cover"
+                      loading="lazy"
                     />
                     <img
                       src="image/works/corporate_identity3.webp"
                       class="portfolio-slide rounded-lg object-cover"
+                      loading="lazy"
                     />
                     <img
                       src="image/works/corporate_identity4.webp"
                       class="portfolio-slide rounded-lg object-cover"
+                      loading="lazy"
                     />
                     <img
                       src="image/works/logo3.webp"
                       class="portfolio-slide rounded-lg object-cover"
+                      loading="lazy"
                     />
                     <img
                       src="image/works/logo4.webp"
                       class="portfolio-slide rounded-lg object-cover"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -406,6 +417,7 @@
                     src="image/icons/figma.png"
                     alt="Figma"
                     class="w-6 h-6"
+                    loading="lazy"
                   />
                   <span class="text-white font-medium">Figma</span>
                   <div
@@ -421,6 +433,7 @@
                     src="image/icons/photoshop.png"
                     alt="Photoshop"
                     class="w-6 h-6"
+                    loading="lazy"
                   />
                   <span class="text-white font-medium">Photoshop</span>
                   <div
@@ -436,6 +449,7 @@
                     src="image/icons/illustrator.png"
                     alt="Illustrator"
                     class="w-6 h-6"
+                    loading="lazy"
                   />
                   <span class="text-white font-medium">Illustrator</span>
                   <div
@@ -451,6 +465,7 @@
                     src="image/icons/chat-gpt.png"
                     alt="Chat GPT"
                     class="w-6 h-6"
+                    loading="lazy"
                   />
                   <span class="text-white font-medium">Chat GPT</span>
                   <div
@@ -734,6 +749,7 @@
                     src="image/avatars/avatar6.jpg"
                     alt="Фото ученика"
                     class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-[#FF6F61]"
+                    loading="lazy"
                   />
                   <p class="text-gray-400 italic mb-4">
                     "Этот курс стал переломным моментом в моей жизни! Раньше я
@@ -755,6 +771,7 @@
                     src="image/avatars/avatar7.jpg"
                     alt="Фото ученика"
                     class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-[#FF6F61]"
+                    loading="lazy"
                   />
                   <p class="text-gray-400 italic mb-4">
                     "Невероятно полезный курс! Практики здесь намного больше,
@@ -776,6 +793,7 @@
                     src="image/avatars/avatar8.jpg"
                     alt="Фото ученика"
                     class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-[#FF6F61]"
+                    loading="lazy"
                   />
                   <p class="text-gray-400 italic mb-4">
                     "Сначала сомневался, стоит ли тратить время и деньги на
@@ -962,6 +980,7 @@
                 src="image/teacher.webp"
                 alt="Фото преподавателя"
                 class="rounded-xl shadow-2xl w-full"
+                loading="lazy"
               />
             </div>
             <div class="reveal" style="transition-delay: 200ms">
@@ -1048,6 +1067,7 @@
                   src="image/consultant.webp"
                   alt="Консультация по курсу"
                   class="rounded-2xl shadow-lg w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <div class="relative bg-white p-6 sm:p-8 rounded-2xl shadow-2xl">
@@ -1292,6 +1312,7 @@
             href="https://www.instagram.com/ARTpixelOfficial"
             target="_blank"
             class="hover:text-[#FF6F61] transition-colors"
+            aria-label="Перейти в наш Instagram"
           >
             <i data-lucide="instagram" class="w-6 h-6"></i>
           </a>
@@ -1299,6 +1320,7 @@
             href="https://t.me/ARTpixelClub"
             target="_blank"
             class="hover:text-[#FF6F61] transition-colors"
+            aria-label="Перейти в наш Telegram"
           >
             <i data-lucide="send" class="w-6 h-6"></i>
           </a>
@@ -1306,6 +1328,7 @@
             href="https://www.youtube.com/@ARTpixelOfficial"
             target="_blank"
             class="hover:text-[#FF6F61] transition-colors"
+            aria-label="Перейти на наш YouTube канал"
           >
             <i data-lucide="youtube" class="w-6 h-6"></i>
           </a>
@@ -1315,5 +1338,12 @@
       </div>
     </footer>
     <script src="js/main.js"></script>
+    <button
+      id="to-top-btn"
+      title="Вернуться наверх"
+      class="fixed bottom-8 right-8 z-50 w-12 h-12 bg-[#FF6F61] rounded-full text-white flex items-center justify-center shadow-lg opacity-0 translate-y-4 transition-all duration-300 hover:bg-[#ff5b4c] hover:scale-110"
+    >
+      <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    </button>
   </body>
 </html>
